@@ -27,19 +27,19 @@ export default {
         children: [
           {
             title: '@formily/reactive',
-            path: '/reactive/',
+            path: 'https://formilyjs-v2.bugduo.com/reactive/',
           },
           {
             title: '@formily/core',
-            path: '/core/',
+            path: 'https://formilyjs-v2.bugduo.com/core/',
           },
           {
             title: '@formily/react',
-            path: '/react/',
+            path: 'https://formilyjs-v2.bugduo.com/react/',
           },
           {
             title: '@formily/vue',
-            path: '/vue/',
+            path: 'https://formilyjs-v2.bugduo.com/vue/',
           },
         ],
       },
@@ -48,7 +48,7 @@ export default {
         children: [
           {
             title: '@formily/antd',
-            path: '/antd/',
+            path: 'https://formilyjs-v2.bugduo.com/antd/',
           },
           {
             title: '@formily/antd-v5',
@@ -60,11 +60,11 @@ export default {
           },
           {
             title: '@formily/next',
-            path: '/next/',
+            path: 'https://formilyjs-v2.bugduo.com/next/',
           },
           {
             title: '@formily/element',
-            path: '/element/',
+            path: 'https://formilyjs-v2.bugduo.com/element/',
           },
           {
             title: '@formily/element-plus',
@@ -146,19 +146,19 @@ export default {
         children: [
           {
             title: '@formily/reactive',
-            path: '/reactive/zh-CN',
+            path: 'https://formilyjs-v2.bugduo.com/reactive/zh-CN',
           },
           {
             title: '@formily/core',
-            path: '/core/zh-CN',
+            path: 'https://formilyjs-v2.bugduo.com/core/zh-CN',
           },
           {
             title: '@formily/react',
-            path: '/react/zh-CN',
+            path: 'https://formilyjs-v2.bugduo.com/react/zh-CN',
           },
           {
             title: '@formily/vue',
-            path: '/vue/',
+            path: 'https://formilyjs-v2.bugduo.com/vue/',
           },
         ],
       },
@@ -167,7 +167,7 @@ export default {
         children: [
           {
             title: '@formily/antd',
-            path: '/antd/zh-CN',
+            path: 'https://formilyjs-v2.bugduo.com/antd/zh-CN',
           },
           {
             title: '@formily/antd-v5',
@@ -179,11 +179,11 @@ export default {
           },
           {
             title: '@formily/next',
-            path: '/next/zh-CN',
+            path: 'https://formilyjs-v2.bugduo.com/next/zh-CN',
           },
           {
             title: '@formily/element',
-            path: '/element/',
+            path: 'https://formilyjs-v2.bugduo.com/element/',
           },
           {
             title: '@formily/element-plus',

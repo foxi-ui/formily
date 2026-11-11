@@ -177,6 +177,26 @@ module.exports = {
 
 这是从 `packages/<name>` 回到仓库根目录 `doc-site/<name>` 的相对路径。
 
+### 跨子站导航
+
+主站导航中的 7 个子站必须使用**完整 URL**，例如：
+
+```text
+https://formilyjs-v2.bugduo.com/reactive/
+https://formilyjs-v2.bugduo.com/core/
+...
+```
+
+不能使用 `/reactive/` 这类站内路径。Dumi 会把以 `/` 开头的导航项当作主站 SPA 的内部路由，点击后只做前端 `pushState`，不会加载子站，表现为页面空白，必须强制刷新才显示。
+
+Dumi 对外部 URL 会自动渲染为：
+
+```html
+<a target="_blank" rel="noopener noreferrer" href="https://..."></a>
+```
+
+因此这些子站链接会自动在新标签页打开。`/guide` 等主站内部导航仍保持站内路由，不受影响。
+
 ### 深链接与 `exportStatic`
 
 Dumi 默认只生成一个 `index.html` 的 SPA。GitHub Pages 没有 SPA fallback，刷新 `/reactive/guide/...` 会 404。
@@ -301,6 +321,10 @@ grep -o '/<name>/[^"]*' doc-site/<name>/index.html | head
 ```bash
 find doc-site/reactive/guide -name index.html
 ```
+
+### 点击主站导航进入子站后页面空白
+
+检查主站 `.umirc.js` 中 7 个子站的导航 `path` 是否为完整 URL（`https://formilyjs-v2.bugduo.com/reactive/` 等），而不是 `/reactive/`。站内路径会被 Dumi 当作主站 SPA 的内部路由，点击后不会加载子站，必须强制刷新。完整 URL 同时会让链接在新标签页打开。
 
 ### 主站贡献者列表为空
 

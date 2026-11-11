@@ -186,6 +186,28 @@ doc-site/vue/guide/concept.html
 
 主站贡献者列表在足够等待时间下可正常渲染 GitHub 头像和用户名。
 
+### 4.4 跨子站导航修复
+
+首次线上部署后发现：主站导航使用 `/reactive/` 等站内路径，Dumi 将其作为主站 SPA 的内部路由，点击后只做前端 `pushState`，不会加载子站，表现为页面空白，必须强制刷新才显示。
+
+修复：根 `.umirc.js` 中 7 个子站导航改为完整 URL：
+
+```text
+https://formilyjs-v2.bugduo.com/reactive/
+https://formilyjs-v2.bugduo.com/core/
+https://formilyjs-v2.bugduo.com/react/
+https://formilyjs-v2.bugduo.com/antd/
+https://formilyjs-v2.bugduo.com/next/
+https://formilyjs-v2.bugduo.com/element/
+https://formilyjs-v2.bugduo.com/vue/
+```
+
+重新构建后验证：
+
+- 7 个子站导航的 `href` 均为绝对 URL。
+- Dumi 自动渲染为 `<a target="_blank" rel="noopener noreferrer">`，即在新标签页打开。
+- 主站内部 `/guide` 等导航仍保持站内路由。
+
 ## 5. 资源检查结果
 
 ### 5.1 构建产物内资源
