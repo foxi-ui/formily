@@ -4,7 +4,7 @@
 
 ### Install the Core Library
 
-To use Formily, you must use [@formily/core](https://core.formilyjs.org), which is responsible for managing the status of the form, form verification, linkage, and so on.
+To use Formily, you must use [@formily/core](https://formilyjs-v2.bugduo.com/core), which is responsible for managing the status of the form, form verification, linkage, and so on.
 
 ```bash
 $ npm install --save @formily/core
@@ -108,10 +108,10 @@ export default () => {
 
 From the above examples, we can learn a lot:
 
-- [createForm](https://core.formilyjs.org/api/entry/create-form) is used to create the core domain model of the form, which is the standard ViewModel as the [MVVM](https://core.formilyjs.org/guide/mvvm) design pattern.
-- The [FormProvider](https://react.formilyjs.org/api/components/form-provider) component is used as the entrance to the view layer bridge form model. It has only one parameter, which is to receive the Form instance created by createForm and pass the Form instance to the child component in the form of context.
-- The [FormLayout](https://antd.formilyjs.org/components/form-layout) component is a component used to control the style of [FormItem](https://antd.formilyjs.org/components/form-item) in batches. Here we specify the layout as top and bottom layout, that is, the label is on the top and the component is on the bottom.
-- The [Field](https://react.formilyjs.org/api/components/field) component is a component used to undertake common fields.
+- [createForm](https://formilyjs-v2.bugduo.com/core/api/entry/create-form) is used to create the core domain model of the form, which is the standard ViewModel as the [MVVM](https://formilyjs-v2.bugduo.com/core/guide/mvvm) design pattern.
+- The [FormProvider](https://formilyjs-v2.bugduo.com/react/api/components/form-provider) component is used as the entrance to the view layer bridge form model. It has only one parameter, which is to receive the Form instance created by createForm and pass the Form instance to the child component in the form of context.
+- The [FormLayout](https://formilyjs-v2.bugduo.com/antd/components/form-layout) component is a component used to control the style of [FormItem](https://formilyjs-v2.bugduo.com/antd/components/form-item) in batches. Here we specify the layout as top and bottom layout, that is, the label is on the top and the component is on the bottom.
+- The [Field](https://formilyjs-v2.bugduo.com/react/api/components/field) component is a component used to undertake common fields.
   - The name attribute identifies the path of the field in the final submitted data of the form.
   - Title attribute, which identifies the title of the field
     - If the decorator is specified as FormItem, then the title attribute will be received as the label by default in the FormItem component.
@@ -126,6 +126,6 @@ From the above examples, we can learn a lot:
     - Note that the decorator attribute is passed in the form of an array, the first parameter represents the specified component type, and the second parameter represents the specified component attribute.
   - The component attribute, which represents the input control of the field, can be Input or Select, etc.
     - Note that the component property is passed in the form of an array, the first parameter represents the specified component type, and the second parameter represents the specified component property.
-- The [FormConsumer](https://react.formilyjs.org/api/components/form-consumer) component exists as a responder of a responsive model. Its core is a render props mode. In the callback function as children, all dependencies are automatically collected. If the dependencies change, it will be re-rendered. With the help of FormConsumer, we can Conveniently realize the needs of various calculations and summaries.
-- The [FormButtonGroup](https://antd.formilyjs.org/components/form-button-group) component exists as a form button group container and is mainly responsible for the layout of the buttons.
-- The [Submit](https://antd.formilyjs.org/components/submit) component exists as an action trigger for form submission. In fact, we can also directly use the form.submit method to submit. But the advantage of using Submit is that there is no need to write the onClick event handler on the Button component every time, and it also handles the loading state of the Form. If the onSubmit method returns a Promise and the Promise is pending, the button will automatically enter the loading state.
+- The [FormConsumer](https://formilyjs-v2.bugduo.com/react/api/components/form-consumer) component exists as a responder of a responsive model. Its core is a render props mode. In the callback function as children, all dependencies are automatically collected. If the dependencies change, it will be re-rendered. With the help of FormConsumer, we can Conveniently realize the needs of various calculations and summaries.
+- The [FormButtonGroup](https://formilyjs-v2.bugduo.com/antd/components/form-button-group) component exists as a form button group container and is mainly responsible for the layout of the buttons.
+- The [Submit](https://formilyjs-v2.bugduo.com/antd/components/submit) component exists as an action trigger for form submission. In fact, we can also directly use the form.submit method to submit. But the advantage of using Submit is that there is no need to write the onClick event handler on the Button component every time, and it also handles the loading state of the Form. If the onSubmit method returns a Promise and the Promise is pending, the button will automatically enter the loading state.

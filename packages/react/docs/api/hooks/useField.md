@@ -2,7 +2,7 @@
 
 ## Description
 
-Mainly used in custom components to read current field properties, manipulate field status, etc. It can be used in the subtree of all Field components. Note that the one you get is [GeneralField](https://core.formilyjs.org/ api/models/field#generalfield), if you need to process different types of fields, please use [Type Checker](https://core.formilyjs.org/api/entry/form-checker)
+Mainly used in custom components to read current field properties, manipulate field status, etc. It can be used in the subtree of all Field components. Note that the one you get is [GeneralField](https://formilyjs-v2.bugduo.com/core/ api/models/field#generalfield), if you need to process different types of fields, please use [Type Checker](https://formilyjs-v2.bugduo.com/core/api/entry/form-checker)
 
 <Alert>
 Note: If you want to use useField in a custom component and respond to changes in the field model, you need to wrap the observer for the custom component

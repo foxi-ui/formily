@@ -1,3 +1,3 @@
 # Dialog and Drawers
 
-Mainly use the [FormDialog](https://antd.formilyjs.org/components/form-dialog) function and [FormDrawer]() function in [@formily/antd](https://antd.formilyjs.org) or [@formily/next](https://fusion.formilyjs.org)
+Mainly use the [FormDialog](https://formilyjs-v2.bugduo.com/antd/components/form-dialog) function and [FormDrawer]() function in [@formily/antd](https://formilyjs-v2.bugduo.com/antd) or [@formily/next](https://formilyjs-v2.bugduo.com/next)

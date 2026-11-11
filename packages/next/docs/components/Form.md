@@ -122,10 +122,10 @@ Note: To realize the carriage return submission, we cannot pass the onSubmit eve
 
 For layout-related API properties, we can refer to [FormLayout](./form-layout), and the rest are the unique API properties of the Form component
 
-| Property name          | Type                                                                                             | Description                                                         | Default value |
-| ---------------------- | ------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------- | ------------- |
-| form                   | [Form](https://core.formilyjs.org/api/models/form)                                               | Form example                                                        | -             |
-| component              | string                                                                                           | Rendering component, can be specified as custom component rendering | `form`        |
-| previewTextPlaceholder | ReactNode                                                                                        | Preview State Placeholder                                           | `N/A`         |
-| onAutoSubmit           | `(values:any)=>any`                                                                              | Carriage return submit event callback                               | -             |
-| onAutoSubmitFailed     | (feedbacks: [IFormFeedback](https://core.formilyjs.org/api/models/form#iformfeedback)[]) => void | Carriage return submission verification failure event callback      | -             |
+| Property name          | Type                                                                                                       | Description                                                         | Default value |
+| ---------------------- | ---------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------- | ------------- |
+| form                   | [Form](https://formilyjs-v2.bugduo.com/core/api/models/form)                                               | Form example                                                        | -             |
+| component              | string                                                                                                     | Rendering component, can be specified as custom component rendering | `form`        |
+| previewTextPlaceholder | ReactNode                                                                                                  | Preview State Placeholder                                           | `N/A`         |
+| onAutoSubmit           | `(values:any)=>any`                                                                                        | Carriage return submit event callback                               | -             |
+| onAutoSubmitFailed     | (feedbacks: [IFormFeedback](https://formilyjs-v2.bugduo.com/core/api/models/form#iformfeedback)[]) => void | Carriage return submission verification failure event callback      | -             |

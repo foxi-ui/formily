@@ -6,7 +6,7 @@ hero:
   desc: 基于Ant Design封装的优雅且易用的Formily2.x组件体系
   actions:
     - text: 主站文档
-      link: //formilyjs.org
+      link: https://formilyjs-v2.bugduo.com
     - text: 组件文档
       link: /zh-CN/components
 features:

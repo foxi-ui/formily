@@ -2,7 +2,7 @@
 
 ## Description
 
-Mainly read the current [Form](https://core.formilyjs.org/api/models/form) instance in the custom component to implement some side-effect dependencies, such as relying on the errors information of the Form, for Implement some more complex scenario-based components
+Mainly read the current [Form](https://formilyjs-v2.bugduo.com/core/api/models/form) instance in the custom component to implement some side-effect dependencies, such as relying on the errors information of the Form, for Implement some more complex scenario-based components
 
 ## Signature
 

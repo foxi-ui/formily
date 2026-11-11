@@ -75,4 +75,4 @@ In conclusion, the way we manage business logic has the following priorities:
   - There is no asynchronous logic, structured reactions are preferred to define logic.
   - There is asynchronous logic, or a large number of calculations, the functional state reactions are preferred to define logic.
 
-For how to play with effects in effects, we mainly look at the [@formily/core](https://core.formilyjs.org) document.
+For how to play with effects in effects, we mainly look at the [@formily/core](https://formilyjs-v2.bugduo.com/core) document.

@@ -4,11 +4,16 @@ import './Contributors.less'
 export const Contributors: React.FC = () => {
   const [contributors, setContributors] = useState([])
   useEffect(() => {
-    fetch('//formilyjs.org/.netlify/functions/contributors')
+    fetch(
+      'https://api.github.com/repos/alibaba/formily/contributors?per_page=100'
+    )
       .then((res) => res.json())
-      .then(({ data }) => {
-        setContributors(data)
+      .then((data) => {
+        if (Array.isArray(data)) {
+          setContributors(data)
+        }
       })
+      .catch(() => undefined)
   }, [])
   return (
     <div className="contri-list">

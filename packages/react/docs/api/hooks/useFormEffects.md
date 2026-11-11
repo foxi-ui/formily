@@ -2,7 +2,7 @@
 
 ## Description
 
-Mainly inject side-effect logic into the current [Form](https://core.formilyjs.org/api/models/form) instance in the custom component to implement some more complex scenario-based components
+Mainly inject side-effect logic into the current [Form](https://formilyjs-v2.bugduo.com/core/api/models/form) instance in the custom component to implement some more complex scenario-based components
 
 <Alert>
 Note: It is invalid to monitor onFormInit in the effects function, because the Form has already been initialized when rendering to the current component, and the effects function will only be executed once, so if you want to rely on the data of useState, please use the reference data of useRef.

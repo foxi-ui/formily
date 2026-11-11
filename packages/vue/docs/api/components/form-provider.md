@@ -21,7 +21,7 @@ type FormProvider = Vue.Component<
 >
 ```
 
-Form 参考[Form](https://core.formilyjs.org/api/models/form)
+Form 参考[Form](https://formilyjs-v2.bugduo.com/core/api/models/form)
 
 ## 用例
 

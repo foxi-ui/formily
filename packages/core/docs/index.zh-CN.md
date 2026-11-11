@@ -6,7 +6,7 @@ hero:
   desc: 阿里巴巴统一前端表单解决方案
   actions:
     - text: 主站文档
-      link: //formilyjs.org
+      link: https://formilyjs-v2.bugduo.com
     - text: 内核文档
       link: /zh-CN/guide
 features:

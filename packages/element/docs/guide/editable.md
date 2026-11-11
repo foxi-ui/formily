@@ -22,7 +22,7 @@
 
 > 内联编辑
 
-参考 [https://element.formilyjs.org/guide/form-item.html#api](https://element.formilyjs.org/guide/form-item.html#api)
+参考 [https://formilyjs-v2.bugduo.com/element/guide/form-item.html#api](https://formilyjs-v2.bugduo.com/element/guide/form-item.html#api)
 
 ### Editable.Popover
 

@@ -47,7 +47,7 @@ Historical experience is always helpful to mankind. Decades ago, humans created 
 
 It just so happened that the github community abstracted a state management solution called Mobx for such MVVM models. The core capabilities of [Mobx](https://github.com/mobxjs/mobx) are its dependency tracking mechanism and the abstraction capabilities of responsive models.
 
-Therefore, with the help of Mobx, the O(n) problem in the form field input process can be completely solved, and it can be solved very elegantly. However, during the implementation of Formily 2.x, it was discovered that Mobx still has some problems that are not compatible with Formily's core ideas. In the end, we only can reinvent one wheel,[@formily/reactive](https://reactive.formilyjs.org) which continues the core idea of Mobx.
+Therefore, with the help of Mobx, the O(n) problem in the form field input process can be completely solved, and it can be solved very elegantly. However, during the implementation of Formily 2.x, it was discovered that Mobx still has some problems that are not compatible with Formily's core ideas. In the end, we only can reinvent one wheel,[@formily/reactive](https://formilyjs-v2.bugduo.com/reactive) which continues the core idea of Mobx.
 
 Mention here [react-hook-form](https://github.com/react-hook-form/react-hook-form) , Very popular, known as the industry’s top performance form solution, let’s take a look at its simplest case:
 
@@ -261,7 +261,7 @@ It can be seen that our linkage is actually based on:
 - Condition-satisfied action
 - Unsatisfied action
 
-To achieve. Because the internal state management uses the [@formily/reactive](https://reactive.formilyjs.org) solution similar to Mobx, Formily easily realizes passive and active linkage scenarios, covering most business needs.
+To achieve. Because the internal state management uses the [@formily/reactive](https://formilyjs-v2.bugduo.com/reactive) solution similar to Mobx, Formily easily realizes passive and active linkage scenarios, covering most business needs.
 
 Therefore, our form can be described by protocol, and it can be configurable no matter how complicated the layout is or the linkage is very complicated.
 

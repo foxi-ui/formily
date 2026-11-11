@@ -1,6 +1,6 @@
 # Custom Components
 
-The realization of business custom components mainly uses the Hooks API and observer API in [@formily/react](https://react.formilyjs.org) or [@formily/vue](https://vue.formilyjs.org).
+The realization of business custom components mainly uses the Hooks API and observer API in [@formily/react](https://formilyjs-v2.bugduo.com/react) or [@formily/vue](https://formilyjs-v2.bugduo.com/vue).
 
 To access the ready-made component library, we mainly use connect/mapProps/mapReadPretty API.
 

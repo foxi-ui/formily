@@ -6,7 +6,7 @@ hero:
   desc: Formily Component System Based on Alibaba Fusion Encapsulation
   actions:
     - text: Home Site
-      link: //formilyjs.org
+      link: https://formilyjs-v2.bugduo.com
     - text: Document
       link: /components
 features:

@@ -11,7 +11,7 @@ The architecture of @formily/react itself is not complicated, because it only pr
 
 ## Form context
 
-From the [architecture diagram](/guide/architecture) we can see that FormProvider exists as a unified context for forms, and its position is very important. It is mainly used to create [Form](//core. formilyjs.org/api/models/form) instances are distributed to all sub-components, whether in built-in components or user-extended components, can be read through [useForm](/api/hooks/use-form) [ Form](//core.formilyjs.org/api/models/form) instance
+From the [architecture diagram](/guide/architecture) we can see that FormProvider exists as a unified context for forms, and its position is very important. It is mainly used to create [Form](//core. formilyjs.org/api/models/form) instances are distributed to all sub-components, whether in built-in components or user-extended components, can be read through [useForm](/api/hooks/use-form) [ Form](https://formilyjs-v2.bugduo.com/core/api/models/form) instance
 
 ## Field context
 
@@ -23,7 +23,7 @@ From the [architecture diagram](/guide/architecture) we can see that [RecursionF
 
 ## Model binding
 
-To understand model binding, you need to understand what [MVVM](//core.formilyjs.org/guide/mvvm) is. After understanding, let’s take a look at this picture:
+To understand model binding, you need to understand what [MVVM](https://formilyjs-v2.bugduo.com/core/guide/mvvm) is. After understanding, let’s take a look at this picture:
 
 ![](https://img.alicdn.com/imgextra/i1/O1CN01A03C191KwT1raxnDg_!!6000000001228-55-tps-2200-869.svg)
 

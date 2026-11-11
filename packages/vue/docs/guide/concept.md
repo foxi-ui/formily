@@ -11,7 +11,7 @@
 
 ## 表单上下文
 
-从[架构图](/guide/architecture)中我们可以看到 FormProvider 是作为表单统一上下文而存在，它的地位非常重要，主要用于将@formily/core 创建出来的[Form](//core.formilyjs.org/api/models/form)实例下发到所有子组件中，不管是在内置组件还是用户扩展的组件，都能通过[useForm](/api/hooks/use-form)读取到[Form](//core.formilyjs.org/api/models/form)实例
+从[架构图](/guide/architecture)中我们可以看到 FormProvider 是作为表单统一上下文而存在，它的地位非常重要，主要用于将@formily/core 创建出来的[Form](https://formilyjs-v2.bugduo.com/core/api/models/form)实例下发到所有子组件中，不管是在内置组件还是用户扩展的组件，都能通过[useForm](/api/hooks/use-form)读取到[Form](https://formilyjs-v2.bugduo.com/core/api/models/form)实例
 
 ## 字段上下文
 
@@ -23,7 +23,7 @@
 
 ## 模型绑定
 
-想要理解模型绑定，需要先理解什么是[MVVM](//core.formilyjs.org/guide/mvvm)，理解了之后我们再看看这张图：
+想要理解模型绑定，需要先理解什么是[MVVM](https://formilyjs-v2.bugduo.com/core/guide/mvvm)，理解了之后我们再看看这张图：
 
 ![](https://img.alicdn.com/imgextra/i1/O1CN01A03C191KwT1raxnDg_!!6000000001228-55-tps-2200-869.svg)
 
@@ -106,7 +106,7 @@ formily 的协议驱动主要是基于标准 JSON Schema 来进行驱动渲染�
 
 ![](https://img.alicdn.com/imgextra/i3/O1CN01jLCRxH1aa3V0x6nw4_!!6000000003345-55-tps-2200-1147.svg)
 
-总结下来，在 @formily/vue 中，主要有 2 层绑定关系，Schema 绑定模型，模型绑定组件，实现绑定的胶水层就是 @formily/vue，需要注意的是，Schema 绑定字段模型之后，字段模型中是感知不到 Schema 的，比如要修改`enum`，就是修改字段模型中的`dataSource`属性了，总之，想要更新字段模型，参考[Field](//core.formilyjs.org/models/field)，想要理解 Schema 与字段模型的映射关系可以参考[Schema](/api/shared/schema)文档
+总结下来，在 @formily/vue 中，主要有 2 层绑定关系，Schema 绑定模型，模型绑定组件，实现绑定的胶水层就是 @formily/vue，需要注意的是，Schema 绑定字段模型之后，字段模型中是感知不到 Schema 的，比如要修改`enum`，就是修改字段模型中的`dataSource`属性了，总之，想要更新字段模型，参考[Field](https://formilyjs-v2.bugduo.com/core/models/field)，想要理解 Schema 与字段模型的映射关系可以参考[Schema](/api/shared/schema)文档
 
 ## 三种开发模式
 

@@ -1,3 +1,3 @@
 # Tab/Accordion Form
 
-Mainly use the [FormTab](https://antd.formilyjs.org/components/form-tab) component and [FormCollapse](https://antd.formilyjs.org/components/form-collapse) component in [@formily/antd](https://antd.formilyjs.org) or [@formily/next](https://fusion.formilyjs.org)
+Mainly use the [FormTab](https://formilyjs-v2.bugduo.com/antd/components/form-tab) component and [FormCollapse](https://formilyjs-v2.bugduo.com/antd/components/form-collapse) component in [@formily/antd](https://formilyjs-v2.bugduo.com/antd) or [@formily/next](https://formilyjs-v2.bugduo.com/next)

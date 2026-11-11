@@ -8,7 +8,7 @@ The observer is a [HOC](https://reactjs.bootcss.com/docs/higher-order-components
 
 ### When to use
 
-When a component uses an [observable](https://reactive.formilyjs.org/api/observable) object inside, and you want the component to respond to changes in the observable object.
+When a component uses an [observable](https://formilyjs-v2.bugduo.com/reactive/api/observable) object inside, and you want the component to respond to changes in the observable object.
 
 ### API definition
 

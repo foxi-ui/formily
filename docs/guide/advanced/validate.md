@@ -7,7 +7,7 @@ Formily's form validation uses the extremely powerful and flexible @formily/vali
 
 At the same time, we can also implement linkage verification in effects or x-reactions/reactions
 
-Specific rule verification document reference [FieldValidator](https://core.formilyjs.org/api/models/field#fieldvalidator)
+Specific rule verification document reference [FieldValidator](https://formilyjs-v2.bugduo.com/core/api/models/field#fieldvalidator)
 
 Form validation is an important part of optimizing user experience and ensuring data accuracy in forms. Formily provides various validation methods, including built-in rule validation, built-in format validation, and custom rule validation. In the following sections, we will introduce these validation methods one by one.
 
@@ -2214,7 +2214,7 @@ export default () => (
 
 ## Custom Verification Messages
 
-Mainly through [registerValidateLocale](https://core.formilyjs.org/api/entry/form-validator-registry#registervalidatelocale) to customize the built-in verification messages
+Mainly through [registerValidateLocale](https://formilyjs-v2.bugduo.com/core/api/entry/form-validator-registry#registervalidatelocale) to customize the built-in verification messages
 
 ```tsx
 import React from 'react'

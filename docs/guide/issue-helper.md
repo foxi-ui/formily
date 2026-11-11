@@ -77,13 +77,13 @@ const form = createForm({
       }))
     })
     onFieldMount('package', async (field) => {
-      const packages = await fetch(
-        'https://formilyjs.org/.netlify/functions/npm-search?q=@formily'
+      const result = await fetch(
+        'https://registry.npmjs.org/-/v1/search?text=@formily&size=250'
       ).then((res) => res.json())
-      field.dataSource = packages.map(({ name }) => {
+      field.dataSource = (result.objects || []).map(({ package: pkg }) => {
         return {
-          label: name,
-          value: name,
+          label: pkg.name,
+          value: pkg.name,
         }
       })
     })

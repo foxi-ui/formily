@@ -1,10 +1,10 @@
 # 介绍
 
-@formily/vue 的核心定位是将 ViewModel([@formily/core](//core.formilyjs.org))与组件实现一个状态绑定关系，它不负责管理表单数据，表单校验，它仅仅是一个渲染胶水层，但是这样一层胶水，并不脏，它会把很多脏逻辑优雅的解耦，变得可维护。
+@formily/vue 的核心定位是将 ViewModel([@formily/core](https://formilyjs-v2.bugduo.com/core))与组件实现一个状态绑定关系，它不负责管理表单数据，表单校验，它仅仅是一个渲染胶水层，但是这样一层胶水，并不脏，它会把很多脏逻辑优雅的解耦，变得可维护。
 
 ## 超高性能
 
-借助 [@formily/core](//core.formilyjs.org) 的响应式模型，@formily/vue 无需做任何优化即可获得超高的性能优势，依赖追踪，精确更新，按需渲染，让我们的表单真正做到了只需关注业务逻辑，无需考虑性能问题。
+借助 [@formily/core](https://formilyjs-v2.bugduo.com/core) 的响应式模型，@formily/vue 无需做任何优化即可获得超高的性能优势，依赖追踪，精确更新，按需渲染，让我们的表单真正做到了只需关注业务逻辑，无需考虑性能问题。
 
 ## 开箱即用
 

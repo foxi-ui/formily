@@ -4,7 +4,7 @@ Formily 2.x has given up supporting controlled mode for form components and fiel
 
 So Formily no longer supports the controlled mode, but if we insist on implementing ordinary React controlled, we can still support it. It can only achieve value control, not field-level control, which is the Field component we use. The properties will only take effect during the first rendering. Any changes to the properties in the future will not be automatically updated. If you want to update automatically, unless you recreate the Form instance (obviously this will lose all the previously maintained state).
 
-Therefore, we more recommend using [@formily/reactive](https://reactive.formilyjs.org) to achieve responsive control, which can achieve both value control and field-level control.
+Therefore, we more recommend using [@formily/reactive](https://formilyjs-v2.bugduo.com/reactive) to achieve responsive control, which can achieve both value control and field-level control.
 
 ## Value Controlled
 
@@ -85,7 +85,7 @@ export default () => {
 
 ## Responsive Value Controlled
 
-Responsive control is mainly to use [@formily/reactive](https://reactive.formilyjs.org) to achieve responsive updates, we can easily achieve two-way binding, while the performance is full of normal controlled updates.
+Responsive control is mainly to use [@formily/reactive](https://formilyjs-v2.bugduo.com/reactive) to achieve responsive updates, we can easily achieve two-way binding, while the performance is full of normal controlled updates.
 
 ```tsx
 import React, { useMemo, useRef } from 'react'
@@ -467,7 +467,7 @@ export default App
 
 ### Best Practices
 
-It is recommended to use [@formily/reactive](https://reactive.formilyjs.org) to achieve responsive control.
+It is recommended to use [@formily/reactive](https://formilyjs-v2.bugduo.com/reactive) to achieve responsive control.
 
 ```tsx
 import React from 'react'

@@ -1,0 +1,66 @@
+name: Deploy Formily Documentation
+
+on:
+  push:
+    branches:
+      - formily_next
+      - docs-deploy
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: github-pages
+  cancel-in-progress: true
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: 16
+          cache: yarn
+
+      - name: Enable Pages
+        uses: actions/configure-pages@v5
+
+      - name: Install dependencies
+        run: yarn install --frozen-lockfile --ignore-engines
+
+      - name: Build documentation
+        run: bash scripts/build-docs.sh
+
+      - name: Verify documentation
+        run: bash scripts/verify-docs.sh doc-site
+
+      - name: Add CNAME
+        run: |
+          echo "formilyjs-v2.bugduo.com" > doc-site/CNAME
+          touch doc-site/.nojekyll
+
+      - name: Upload Pages artifact
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: ./doc-site
+
+  deploy:
+    runs-on: ubuntu-latest
+    needs: build
+
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+
+    steps:
+      - name: Deploy
+        id: deployment
+        uses: actions/deploy-pages@v4

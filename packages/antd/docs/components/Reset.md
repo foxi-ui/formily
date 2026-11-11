@@ -184,8 +184,8 @@ export default () => (
 
 Other API reference https://ant.design/components/button-cn/
 
-| Property name          | Type                                                                                             | Description                                              | Default value |
-| ---------------------- | ------------------------------------------------------------------------------------------------ | -------------------------------------------------------- | ------------- |
-| onClick                | `(event: MouseEvent) => void \| boolean`                                                         | Click event, if it returns false, it can block resetting | -             |
-| onResetValidateSuccess | (payload: any) => void                                                                           | Reset validation success event                           | -             |
-| onResetValidateFailed  | (feedbacks: [IFormFeedback](https://core.formilyjs.org/api/models/form#iformfeedback)[]) => void | Reset validation failure event                           | -             |
+| Property name          | Type                                                                                                       | Description                                              | Default value |
+| ---------------------- | ---------------------------------------------------------------------------------------------------------- | -------------------------------------------------------- | ------------- |
+| onClick                | `(event: MouseEvent) => void \| boolean`                                                                   | Click event, if it returns false, it can block resetting | -             |
+| onResetValidateSuccess | (payload: any) => void                                                                                     | Reset validation success event                           | -             |
+| onResetValidateFailed  | (feedbacks: [IFormFeedback](https://formilyjs-v2.bugduo.com/core/api/models/form#iformfeedback)[]) => void | Reset validation failure event                           | -             |

@@ -7,7 +7,7 @@ Formily 的表单校验使用了极其强大且灵活的@formily/validator 校�
 
 同时我们还能在 effects 或者 x-reactions/reactions 中实现联动校验
 
-具体规则校验文档参考 [FieldValidator](https://core.formilyjs.org/zh-CN/api/models/field#fieldvalidator)
+具体规则校验文档参考 [FieldValidator](https://formilyjs-v2.bugduo.com/core/zh-CN/api/models/field#fieldvalidator)
 
 表单校验是表单中优化用户体验和保证数据准确性的重要一环，Formily 提供了多种校验方式，包括内置规则校验、内置格式校验、自定义规则校验等，下面我们将逐一介绍这些校验方式。
 
@@ -2205,7 +2205,7 @@ export default () => (
 
 ## 定制校验文案
 
-主要通过[registerValidateLocale](https://core.formilyjs.org/zh-CN/api/entry/form-validator-registry#registervalidatelocale)来定制内置校验文案
+主要通过[registerValidateLocale](https://formilyjs-v2.bugduo.com/core/zh-CN/api/entry/form-validator-registry#registervalidatelocale)来定制内置校验文案
 
 ```tsx
 import React from 'react'

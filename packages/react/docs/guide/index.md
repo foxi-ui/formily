@@ -1,10 +1,10 @@
 # Introduction
 
-The core positioning of @formily/react is to realize a state binding relationship between ViewModel ([@formily/core](//core.formilyjs.org)) and components. It is not responsible for managing form data and form verification. It is only A rendering glue layer, but such a layer of glue is not dirty, it will elegantly decouple a lot of dirty logic and become maintainable.
+The core positioning of @formily/react is to realize a state binding relationship between ViewModel ([@formily/core](https://formilyjs-v2.bugduo.com/core)) and components. It is not responsible for managing form data and form verification. It is only A rendering glue layer, but such a layer of glue is not dirty, it will elegantly decouple a lot of dirty logic and become maintainable.
 
 ## Ultra high performance
 
-With the responsive model of [@formily/core](//core.formilyjs.org), @formily/react can obtain super high performance advantages without any optimization, relying on tracking, accurate updates, on-demand rendering, let us The form of really does only need to focus on business logic, without considering performance issues.
+With the responsive model of [@formily/core](https://formilyjs-v2.bugduo.com/core), @formily/react can obtain super high performance advantages without any optimization, relying on tracking, accurate updates, on-demand rendering, let us The form of really does only need to focus on business logic, without considering performance issues.
 
 ## Out of the box
 

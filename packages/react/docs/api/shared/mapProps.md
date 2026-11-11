@@ -2,7 +2,7 @@
 
 ## Description
 
-Adapter function that maps [Field](https://core.formilyjs.org/api/models/field) attributes and component attributes, mainly used in conjunction with the connect function
+Adapter function that maps [Field](https://formilyjs-v2.bugduo.com/core/api/models/field) attributes and component attributes, mainly used in conjunction with the connect function
 
 ## Signature
 

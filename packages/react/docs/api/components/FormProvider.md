@@ -16,7 +16,7 @@ type FormProvider = React.FC<{
 }>
 ```
 
-Form reference [Form](https://core.formilyjs.org/api/models/form)
+Form reference [Form](https://formilyjs-v2.bugduo.com/core/api/models/form)
 
 ## Example
 

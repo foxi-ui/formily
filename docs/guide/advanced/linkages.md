@@ -7,11 +7,11 @@ This is very convenient for one-to-many linkage scenarios, but it is very troubl
 
 The core of active linkage is based on
 
-- [FormEffectHooks](https://core.formilyjs.org/api/entry/form-effect-hooks)
-- [FieldEffectHooks](https://core.formilyjs.org/api/entry/field-effect-hooks)
-- [setFormState](https://core.formilyjs.org/api/models/form#setformstate)
-- [setFieldState](https://core.formilyjs.org/api/models/form#setfieldstate)
-- [SchemaReactions](https://react.formilyjs.org/api/shared/schema#schemareactions)
+- [FormEffectHooks](https://formilyjs-v2.bugduo.com/core/api/entry/form-effect-hooks)
+- [FieldEffectHooks](https://formilyjs-v2.bugduo.com/core/api/entry/field-effect-hooks)
+- [setFormState](https://formilyjs-v2.bugduo.com/core/api/models/form#setformstate)
+- [setFieldState](https://formilyjs-v2.bugduo.com/core/api/models/form#setfieldstate)
+- [SchemaReactions](https://formilyjs-v2.bugduo.com/react/api/shared/schema#schemareactions)
 
 Realize active linkage, the advantage is that it is very convenient to realize one-to-many linkage.
 
@@ -990,9 +990,9 @@ export default () => (
 
 The core of the passive mode is based on
 
-- [onFieldReact](https://core.formilyjs.org/api/entry/field-effect-hooks#onfieldreact) Implement global reactive logic
-- [FieldReaction](https://core.formilyjs.org/api/models/field#fieldreaction) Implement partial responsive logic
-- [SchemaReactions](https://react.formilyjs.org/api/shared/schema#schemareactions) Implement the structured logical description in the Schema protocol (the internal implementation is based on FieldReaction)
+- [onFieldReact](https://formilyjs-v2.bugduo.com/core/api/entry/field-effect-hooks#onfieldreact) Implement global reactive logic
+- [FieldReaction](https://formilyjs-v2.bugduo.com/core/api/models/field#fieldreaction) Implement partial responsive logic
+- [SchemaReactions](https://formilyjs-v2.bugduo.com/react/api/shared/schema#schemareactions) Implement the structured logical description in the Schema protocol (the internal implementation is based on FieldReaction)
 
 ### One-to-One Linkage
 

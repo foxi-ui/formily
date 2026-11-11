@@ -51,7 +51,7 @@ interface createSchemaField {
 }
 ```
 
-IFieldFactoryProps 参考 [IFieldFactoryProps](https://core.formilyjs.org/zh-CN/api/models/form#ifieldfactoryprops)
+IFieldFactoryProps 参考 [IFieldFactoryProps](https://formilyjs-v2.bugduo.com/core/zh-CN/api/models/form#ifieldfactoryprops)
 
 ISchema 参考 [ISchema](/api/shared/schema#ischema)
 
@@ -142,7 +142,7 @@ export default () => (
 
 ## JSON Schema ReactNode Prop 用例 （x-slot-node）
 
-参考[Slot](https://react.formilyjs.org/zh-CN/api/shared/schema#slot)
+参考[Slot](https://formilyjs-v2.bugduo.com/react/zh-CN/api/shared/schema#slot)
 
 ```tsx
 import React from 'react'
@@ -208,7 +208,7 @@ export default () => (
 
 ## JSON Schema Render Prop 用例 （x-slot-node & isRenderProp）
 
-参考[Slot](https://react.formilyjs.org/zh-CN/api/shared/schema#slot)
+参考[Slot](https://formilyjs-v2.bugduo.com/react/zh-CN/api/shared/schema#slot)
 
 ```tsx
 import React from 'react'

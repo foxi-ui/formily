@@ -70,7 +70,7 @@ Because Formily1.x users mainly use setFieldState/setFormState and getFieldState
 **VirtualField**
 
 - V1: Represents a virtual field
-- V2: Renamed and use [VoidField](https://core.formilyjs.org/api/models/void-field) uniformly
+- V2: Renamed and use [VoidField](https://formilyjs-v2.bugduo.com/core/api/models/void-field) uniformly
 
 ## Bridge layer differences
 
@@ -79,17 +79,17 @@ Because Formily1.x users mainly use setFieldState/setFormState and getFieldState
 **createFormActions/createAsyncFormActions**
 
 - V1 Create a Form operator, you can call the setFieldState/setFormState method.
-- V2 is removed, and the operation status of the Form instance created by [createForm](https://core.formilyjs.org/api/entry/create-form) in @formily/core is used uniformly.
+- V2 is removed, and the operation status of the Form instance created by [createForm](https://formilyjs-v2.bugduo.com/core/api/entry/create-form) in @formily/core is used uniformly.
 
 **Form**
 
 - V1 will create a Form instance inside, which can control the transfer of values/initialValues attributes, etc.
-- V2 removed, unified use of [FormProvider](https://react.formilyjs.org/api/components/form-provider)
+- V2 removed, unified use of [FormProvider](https://formilyjs-v2.bugduo.com/react/api/components/form-provider)
 
 **SchemaForm**
 
 - V1 will parse the json-schema protocol internally, create a Form instance, support controlled mode, and render it.
-- V2 is removed, the SchemaField component created by [createSchemaField](https://react.formilyjs.org/api/components/schema-field) is used uniformly, and the controlled mode is not supported.
+- V2 is removed, the SchemaField component created by [createSchemaField](https://formilyjs-v2.bugduo.com/react/api/components/schema-field) is used uniformly, and the controlled mode is not supported.
 
 **Field**
 
@@ -99,22 +99,22 @@ Because Formily1.x users mainly use setFieldState/setFormState and getFieldState
 **VirtualField**
 
 - V1 supports controlled mode, which requires the use of render props for component state mapping.
-- V2 does not support controlled mode, renamed [VoidField](https://react.formilyjs.org/api/components/void-field), and passed in the decorator/component property to quickly implement state mapping.
+- V2 does not support controlled mode, renamed [VoidField](https://formilyjs-v2.bugduo.com/react/api/components/void-field), and passed in the decorator/component property to quickly implement state mapping.
 
 **FieldList**
 
 - V1 Represent auto-incremented field control component
-- V2 Renamed to [ArrayField](https://react.formilyjs.org/api/components/array-field)
+- V2 Renamed to [ArrayField](https://formilyjs-v2.bugduo.com/react/api/components/array-field)
 
 **FormSpy**
 
 - V1 Monitor all life cycle triggers and re-render
-- V2 Remove and use [FormConsumer](https://react.formilyjs.org/api/components/form-consumer)
+- V2 Remove and use [FormConsumer](https://formilyjs-v2.bugduo.com/react/api/components/form-consumer)
 
 **SchemaMarkupField**
 
 - V1 Stands for Schema description label component
-- V2 Remove, unified use the description label component created by the [createSchemaField](https://react.formilyjs.org/api/components/schema-field)
+- V2 Remove, unified use the description label component created by the [createSchemaField](https://formilyjs-v2.bugduo.com/react/api/components/schema-field)
 
 **useFormQuery**
 
@@ -124,27 +124,27 @@ Because Formily1.x users mainly use setFieldState/setFormState and getFieldState
 **useForm**
 
 - V1 Represents the creation of a Form instance
-- V2 Represents the Form instance in the consumption context, if you want to create it, please use [createForm](https://react.formilyjs.org/api/entry/create-form)
+- V2 Represents the Form instance in the consumption context, if you want to create it, please use [createForm](https://formilyjs-v2.bugduo.com/react/api/entry/create-form)
 
 **useField**
 
 - V1 Represents the creation of a Field instance
-- V2 Represents the Field instance in the consumption context, if you want to create it, please call [form.createField](https://core.formilyjs.org/api/models/form#createfield)
+- V2 Represents the Field instance in the consumption context, if you want to create it, please call [form.createField](https://formilyjs-v2.bugduo.com/core/api/models/form#createfield)
 
 **useVirtualField**
 
 - V1 Represents the creation of a VirtualField instance
-- V2 Remove, if you want to create, please call [form.createVoidField](https://core.formilyjs.org/api/models/form#createvoidfield)
+- V2 Remove, if you want to create, please call [form.createVoidField](https://formilyjs-v2.bugduo.com/core/api/models/form#createvoidfield)
 
 **useFormState**
 
 - V1 Form state in consumption context
-- V2 Remove, use [useForm](https://react.formilyjs.org/api/hooks/use-form) uniformly
+- V2 Remove, use [useForm](https://formilyjs-v2.bugduo.com/react/api/hooks/use-form) uniformly
 
 **useFieldState**
 
 - V1 consume Field status in context
-- V2 Remove, use [useField](https://react.formilyjs.org/api/hooks/use-field)
+- V2 Remove, use [useField](https://formilyjs-v2.bugduo.com/react/api/hooks/use-field)
 
 **useFormSpy**
 
@@ -154,12 +154,12 @@ Because Formily1.x users mainly use setFieldState/setFormState and getFieldState
 **useSchemaProps**
 
 - V1Cconsume rops of SchemaField in context
-- V2 Remove, use [useFieldSchema](https://react.formilyjs.org/api/hooks/use-field-schema) uniformly
+- V2 Remove, use [useFieldSchema](https://formilyjs-v2.bugduo.com/react/api/hooks/use-field-schema) uniformly
 
 **connect**
 
 - V1 Standard HOC
-- V2 The higher-order function is changed to 1st order, and the properties have changed dramatically. See the [connect document](https://react.formilyjs.org/api/shared/connect) for details
+- V2 The higher-order function is changed to 1st order, and the properties have changed dramatically. See the [connect document](https://formilyjs-v2.bugduo.com/react/api/shared/connect) for details
 
 **registerFormField/registerVirtaulBox/registerFormComponent/registerFormItemComponent**
 

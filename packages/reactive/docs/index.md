@@ -6,7 +6,7 @@ hero:
   desc: DDD-oriented Responsive State Management Solution
   actions:
     - text: Home Site
-      link: //formilyjs.org
+      link: https://formilyjs-v2.bugduo.com
     - text: Document
       link: /guide
 features:

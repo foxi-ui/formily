@@ -46,7 +46,7 @@ interface createSchemaField {
 }
 ```
 
-IFieldFactoryProps 参考 [IFieldFactoryProps](https://core.formilyjs.org/api/models/form#ifieldfactoryprops)
+IFieldFactoryProps 参考 [IFieldFactoryProps](https://formilyjs-v2.bugduo.com/core/api/models/form#ifieldfactoryprops)
 
 ISchema 参考 [ISchema](/api/shared/schema#ischema)
 

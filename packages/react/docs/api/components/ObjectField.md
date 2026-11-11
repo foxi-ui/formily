@@ -6,7 +6,7 @@ order: 2
 
 ## Description
 
-As @formily/core's [createObjectField](https://core.formilyjs.org/api/models/form#createobjectfield) React implementation, it is a bridge component specifically used to bind ViewModel and input controls, ObjectField component Property reference [IFieldFactoryProps](https://core.formilyjs.org/api/models/form#ifieldfactoryprops)
+As @formily/core's [createObjectField](https://formilyjs-v2.bugduo.com/core/api/models/form#createobjectfield) React implementation, it is a bridge component specifically used to bind ViewModel and input controls, ObjectField component Property reference [IFieldFactoryProps](https://formilyjs-v2.bugduo.com/core/api/models/form#ifieldfactoryprops)
 
 <Alert>
 When we use the ObjectField component, we must remember to pass the name attribute. At the same time, use render props to organize sub-components
