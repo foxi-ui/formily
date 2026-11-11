@@ -50,6 +50,9 @@ echo "Verifying documentation output at $OUTPUT"
 check_file "$OUTPUT/index.html"
 check_assets "$OUTPUT"
 check_index_refs "$OUTPUT/index.html"
+check_file "$OUTPUT/assets/chrome/logo.svg"
+check_file "$OUTPUT/assets/chrome/favicon.svg"
+check_file "$OUTPUT/assets/chrome/hero.png"
 
 for name in "${SITES[@]}"; do
   site="$OUTPUT/$name"
@@ -59,6 +62,9 @@ for name in "${SITES[@]}"; do
   check_file "$index"
   check_assets "$site"
   check_index_refs "$index"
+  check_file "$site/assets/chrome/logo.svg"
+  check_file "$site/assets/chrome/favicon.svg"
+  check_file "$site/assets/chrome/hero.png"
 
   if [ -s "$index" ] && ! grep -q "/$name/" "$index"; then
     fail "$name/index.html does not reference the /$name/ base path"
@@ -105,6 +111,12 @@ fi
 for external in "esm.sh" "at.alicdn.com"; do
   if grep -rIl -- "$external" "$OUTPUT" >/dev/null 2>&1; then
     fail "external dependency '$external' remains in $OUTPUT"
+  fi
+done
+
+for asset in O1CN01Kq3OHU1fph6LGqjIz O1CN01XtT3Tv1Wd1b5hNVKy O1CN01ZcvS4e26XMsdsCkf9; do
+  if grep -rIl -- "$asset" "$OUTPUT" >/dev/null 2>&1; then
+    fail "brand asset still references alicdn: $asset"
   fi
 done
 

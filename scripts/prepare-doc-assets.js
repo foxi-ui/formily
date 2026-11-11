@@ -106,3 +106,28 @@ console.log(
     elementPublicDir
   )}`
 )
+
+// Brand assets are shared by every site. Dumi sites copy them through their
+// Umi `copy` config; VuePress sites get them in their public directories here.
+const chromeDir = path.join(root, 'docs-assets/chrome')
+if (!fs.existsSync(chromeDir)) {
+  console.error(
+    `[prepare-doc-assets] Missing ${chromeDir}. Brand assets are required.`
+  )
+  process.exit(1)
+}
+const chromeTargets = [
+  path.join(root, 'packages/vue/docs/.vuepress/public/assets/chrome'),
+  path.join(root, 'packages/element/docs/.vuepress/public/assets/chrome'),
+]
+for (const target of chromeTargets) {
+  fs.mkdirSync(target, { recursive: true })
+  for (const name of fs.readdirSync(chromeDir)) {
+    fs.copyFileSync(path.join(chromeDir, name), path.join(target, name))
+  }
+}
+console.log(
+  `[prepare-doc-assets] Copied chrome assets to ${chromeTargets
+    .map((target) => path.relative(root, target))
+    .join(', ')}`
+)

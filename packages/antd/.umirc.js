@@ -7,11 +7,10 @@ export default {
   base,
   publicPath: base,
   exportStatic: {},
-  logo: '//img.alicdn.com/imgextra/i2/O1CN01Kq3OHU1fph6LGqjIz_!!6000000004056-55-tps-1141-150.svg',
+  logo: `${base}assets/chrome/logo.svg`,
   title: 'Ant Design',
   hash: true,
-  favicon:
-    '//img.alicdn.com/imgextra/i3/O1CN01XtT3Tv1Wd1b5hNVKy_!!6000000002810-55-tps-360-360.svg',
+  favicon: `${base}assets/chrome/favicon.svg`,
   outputPath,
   locales: [
     ['en-US', 'English'],
@@ -52,6 +51,10 @@ export default {
       from: '../../node_modules/antd/dist/antd.css',
       to: 'assets/css/antd.css',
     },
+    {
+      from: '../../docs-assets/chrome',
+      to: 'assets/chrome',
+    },
   ],
   links: [
     {
@@ -70,7 +73,7 @@ export default {
       padding: 0 28px !important;
     }
     .__dumi-default-layout-hero{
-      background-image: url(//img.alicdn.com/imgextra/i4/O1CN01ZcvS4e26XMsdsCkf9_!!6000000007671-2-tps-6001-4001.png);
+      background-image: url(${base}assets/chrome/hero.png);
       background-size: cover;
       background-repeat: no-repeat;
       padding: 120px 0 !important;

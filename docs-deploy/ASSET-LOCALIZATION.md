@@ -27,7 +27,7 @@
 | 修复失效 mock 上传接口（mocky / beeceptor）                   |  +0.5–1 |
 | 动态 API / iframe 降级（GitHub、registry、CodeSandbox）       |    +1–2 |
 
-> P1（esm.sh CSS 与字体）已于 2026-11-11 实施并通过完整构建验证，见第 8 节。
+> P0（品牌资源）和 P1（esm.sh CSS 与字体）均已实施并通过完整构建验证，见第 8、9 节。
 
 ## 1. 审计方法
 
@@ -211,7 +211,7 @@ copy: [
 
 | 阶段                  | 内容                                                                         |                         估算 |
 | --------------------- | ---------------------------------------------------------------------------- | ---------------------------: |
-| **P0 品牌资源**       | alicdn logo/favicon/hero + 8 个配置 + 拷贝机制                               |                   0.5–1 人天 |
+| **P0 品牌资源**       | alicdn logo/favicon/hero + 8 个配置 + 拷贝机制                               | ✅ 已完成（原估 0.5–1 人天） |
 | **P1 CSS 与图标字体** | esm.sh 三份 CSS、element 字体、next 的 at.alicdn 字体改写、VuePress 静态拷贝 | ✅ 已完成（原估 0.5–1 人天） |
 | **P2 内容图片**       | 28 个 alicdn 内容图、37 个 md、frontmatter/TSX 特殊处理                      |                   1–1.5 人天 |
 | **P3 零 alicdn**      | Upload 占位图（2 个库源码文件，data URI 或随包打包）                         |                   0.5–1 人天 |
@@ -302,6 +302,40 @@ Documentation verification passed
 - next 本地 CSS：`doc-site/next/assets/css/next-noreset.css`，被 325 个页面引用；CSS 中 6 个字体 URL 全部改为 `fonts/...`，5 个字体文件已拷贝。
 - element 本地 CSS：`doc-site/element/assets/css/element-ui.css` 和 `fonts/element-icons.*`，`@font-face` 为 `url(fonts/element-icons.woff)` / `.ttf`，无 `[object Module]`。
 - 本地静态服务器验证：`/assets/css/antd.css`、`/react/assets/css/antd.css`、`/antd/assets/css/antd.css`、`/next/assets/css/next-noreset.css`、`/next/assets/css/fonts/font_515771_xjdbujl2iu.woff2`、`/element/`、`/element/assets/css/element-ui.css`、`/element/assets/css/fonts/element-icons.woff` 全部 HTTP 200。
+
+## 9. P0 实施记录（2026-11-11）
+
+### 9.1 变更内容
+
+| 内容                             | 说明                                                                                                                                                                                     |
+| -------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `docs-assets/chrome/logo.svg`    | 3,704 B，本地 logo                                                                                                                                                                       |
+| `docs-assets/chrome/favicon.svg` | 652 B，本地 favicon                                                                                                                                                                      |
+| `docs-assets/chrome/hero.png`    | 396,275 B，本地首页 hero 背景                                                                                                                                                            |
+| 6 个 Dumi 配置                   | 根 `.umirc.js`、`packages/{reactive,core,react,antd,next}/.umirc.js`：`logo`/`favicon` 改为 `${base}assets/chrome/...`，hero 改为 `url(${base}assets/chrome/hero.png)`；增加 `copy` 条目 |
+| 2 个 VuePress 配置               | `packages/{vue,element}/docs/.vuepress/config.js`：favicon 改为 `/assets/chrome/favicon.svg`，`themeConfig.logo` 改为 `/assets/chrome/logo.svg`（由 `$withBase` 加 base）                |
+| `scripts/prepare-doc-assets.js`  | 把 `docs-assets/chrome` 拷贝到 vue/element 的 `.vuepress/public/assets/chrome`                                                                                                           |
+| `packages/vue/package.json`      | 增加 `prestart` / `prebuild:docs`，自动执行资源准备                                                                                                                                      |
+| `scripts/verify-docs.sh`         | 增加 8 个站点的品牌资源存在性检查，以及 3 个品牌 alicdn URL 的残留断言                                                                                                                   |
+| `.gitignore`                     | 忽略 `packages/vue/docs/.vuepress/public/assets`                                                                                                                                         |
+
+### 9.2 验证结果
+
+```text
+$ nvm use 16 && bash scripts/build-docs.sh
+Documentation verification passed
+All documentation built successfully: doc-site
+
+# 3 个品牌 alicdn URL 在产物中已归零
+$ grep -rl 'O1CN01Kq3OHU1fph6LGqjIz|O1CN01XtT3Tv1Wd1b5hNVKy|O1CN01ZcvS4e26XMsdsCkf9' doc-site | wc -l
+0
+```
+
+- 8 个站点（主站 + reactive/core/react/antd/next/element/vue）的 `assets/chrome/{logo,favicon,hero}` 均存在。
+- Dumi 页面的 favicon、hero 内联 CSS 均为本地路径：`/assets/chrome/...`、`/reactive/assets/chrome/...` 等。
+- Dumi 的 logo 在客户端 JS bundle 中使用本地路径（Dumi 1 的 navbar 由客户端渲染）；VuePress 的 logo 直接出现在 HTML 中：`/element/assets/chrome/logo.svg`、`/vue/assets/chrome/logo.svg`。
+- 本地静态服务器验证品牌资源全部 HTTP 200。
+- 说明：文档内容图片（P2）和 Upload 占位图（P3）仍引用 `img.alicdn.com`，因此本阶段不要求产物完全无 alicdn。
 
 ## 附录 A：审计命令
 

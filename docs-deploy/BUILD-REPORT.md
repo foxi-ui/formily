@@ -270,7 +270,7 @@ https://formilyjs-v2.bugduo.com/vue/
 
 - **Node 16 已停止维护**：当前构建和 CI 固定 Node 16，这是旧 Dumi/VuePress/webpack 4 工具链唯一已验证版本。升级 Node 需要单独任务。
 - **Node 22 下 `yarn build` 失败**：新版 npm 拒绝旧 `devEngines.node` 字段；不是文档配置问题。
-- **外部 CDN 依赖**：`esm.sh` 的 antd/next/element CSS 及其字体已本地化（见 `docs-deploy/ASSET-LOCALIZATION.md`）；`img.alicdn.com` 图片、`unpkg` 演示数据、CodeSandbox 仍未本地化；网络不可达时对应图片/Demo 可能降级，但不影响页面主体渲染。
+- **外部 CDN 依赖**：`esm.sh` 的 CSS/字体，以及 `img.alicdn.com` 的 logo/favicon/hero 已本地化（见 `docs-deploy/ASSET-LOCALIZATION.md`）；文档内容图片、Upload 占位图、`unpkg` 演示数据、CodeSandbox 仍未本地化；网络不可达时对应图片/Demo 可能降级，但不影响页面主体渲染。
 - **GitHub API 频率限制**：未认证请求 60 次/小时，超限时贡献者列表为空。
 - **VuePress TS 检查**：文档构建使用 `transpileOnly`，类型检查由 `yarn build` 的 `tsc` 负责。
 

@@ -26,6 +26,7 @@ package.zip
 doc-site
 docs-assets/generated
 packages/element/docs/.vuepress/public/assets
+packages/vue/docs/.vuepress/public/assets
 .lerna-changelog
 .history
 .lint-report.log
