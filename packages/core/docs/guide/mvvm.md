@@ -4,7 +4,7 @@
 
 **MVVM** (**Model–view–viewmodel**) is an OOP software architecture model. Its core is to separate the logic and view of our application to improve code maintainability and application robustness. We can use a picture to describe:
 
-![](//img.alicdn.com/imgextra/i3/O1CN01jiB7h723ZFf0lBCTo_!!6000000007269-55-tps-1244-432.svg)
+![](../../../../docs-assets/content/core-mvvm.svg)
 
 To explain, the View (view layer) is responsible for maintaining the UI structure and style, and is responsible for data binding with the ViewModel (view model). The data binding relationship here is two-way, that is, the ViewModel (view model) data occurs. Changes will trigger the update of the View (view layer), and at the same time changes in the data of the view layer will trigger the changes of the ViewModel (view model). Model is more biased towards the actual business data processing model. Both ViewModel and Model are congested models, and both are injected with business logic from different fields. For example, the business logic of ViewModel is more biased towards the domain logic of the view interaction layer, while the business logic of Model is more biased towards the processing logic of business data.
 

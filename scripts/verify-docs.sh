@@ -53,6 +53,8 @@ check_index_refs "$OUTPUT/index.html"
 check_file "$OUTPUT/assets/chrome/logo.svg"
 check_file "$OUTPUT/assets/chrome/favicon.svg"
 check_file "$OUTPUT/assets/chrome/hero.png"
+check_file "$OUTPUT/assets/icons/feature-easier.svg"
+check_file "$OUTPUT/assets/content/form-builder.png"
 
 for name in "${SITES[@]}"; do
   site="$OUTPUT/$name"
@@ -74,6 +76,15 @@ for name in "${SITES[@]}"; do
     fail "$name directory is empty"
   fi
 done
+
+for name in reactive core react antd next; do
+  check_file "$OUTPUT/$name/assets/icons/feature-easier.svg"
+done
+
+content_count=$(find "$OUTPUT/assets/content" -type f | wc -l | tr -d ' ')
+if [ "$content_count" -lt 19 ]; then
+  fail "expected at least 19 content assets, found $content_count"
+fi
 
 # Third-party styles and icon fonts must be served from the docs origin.
 check_file "$OUTPUT/assets/css/antd.css"
@@ -117,6 +128,16 @@ done
 for asset in O1CN01Kq3OHU1fph6LGqjIz O1CN01XtT3Tv1Wd1b5hNVKy O1CN01ZcvS4e26XMsdsCkf9; do
   if grep -rIl -- "$asset" "$OUTPUT" >/dev/null 2>&1; then
     fail "brand asset still references alicdn: $asset"
+  fi
+done
+
+if grep -rIl -- "img.alicdn.com/imgextra" "$OUTPUT" >/dev/null 2>&1; then
+  fail "img.alicdn.com/imgextra references remain in $OUTPUT"
+fi
+
+for asset in TB1HSvqxkT2gK0jSZFkXXcIQFXa TB1HUnjxXY7gK0jSZKzXXaikpXa TB1NLrjxXY7gK0jSZKzXXaikpXa TB1O.6mxbr1gK0jSZR0XXbP8XXa; do
+  if grep -rIl -- "$asset" "$OUTPUT" >/dev/null 2>&1; then
+    fail "content image still references alicdn: $asset"
   fi
 done
 

@@ -2,7 +2,7 @@
 
 ## 介绍
 
-![](http://img.alicdn.com/imgextra/i2/O1CN01eI9FLz22tZek2jv7E_!!6000000007178-2-tps-3683-2272.png)
+![](../../docs-assets/content/form-builder.png)
 
 Formily 表单设计器是基于[designable](https://github.com/alibaba/designable)而扩展出来的扩展包，它在继承了 designable 的基础能力上，提供了 Formily 基础表单的搭建和配置能力。
 

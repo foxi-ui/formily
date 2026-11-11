@@ -25,7 +25,7 @@ From the [architecture diagram](/guide/architecture) we can see that [RecursionF
 
 To understand model binding, you need to understand what [MVVM](https://formilyjs-v2.bugduo.com/core/guide/mvvm) is. After understanding, let’s take a look at this picture:
 
-![](https://img.alicdn.com/imgextra/i1/O1CN01A03C191KwT1raxnDg_!!6000000001228-55-tps-2200-869.svg)
+![](../../../../docs-assets/content/react-concept.svg)
 
 In Formily, @formily/core is ViewModel, Component and Decorator are View, @formily/react is the glue layer that binds ViewModel and View, and the binding of ViewModel and View is called model binding, which implements model binding. The main methods are [useField](/api/hooks/use-field), and [connect](/api/shared/connect) and [mapProps](/api/shared/map-props) can also be used. Note that Component only needs to support the value/onChange property to automatically realize the two-way binding of the data layer.
 
@@ -104,7 +104,7 @@ What is the difference between SchemaField and RecursionField? There are two mai
 
 I talked about model binding, and protocol binding is the process of converting Schema protocol into model binding, because JSON-Schema protocol is a JSON string and can be stored offline, while model binding is a binding between memory The relationship is at the Runtime layer. For example, `x-component` is the string identifier of the component in the Schema, but the component in the model requires component reference, so the JSON string and the Runtime layer need to be converted. Then we can continue to improve the above model binding diagram:
 
-![](https://img.alicdn.com/imgextra/i3/O1CN01jLCRxH1aa3V0x6nw4_!!6000000003345-55-tps-2200-1147.svg)
+![](../../../../docs-assets/content/react-concept-2.svg)
 
 To sum up, in @formily/react, there are mainly two layers of binding relationships, Schema binding model, model binding component, the glue layer that realizes the binding is @formily/react, it should be noted that Schema binds the field model After that, the Schema is not perceptible in the field model. For example, if you want to modify the `enum`, you need to modify the `dataSource` attribute in the field model. In short, if you want to update the field model, refer to [Field](//core.formilyjs. org/api/models/field), you can refer to [Schema](/api/shared/schema) document if you want to understand the mapping relationship between Schema and field model
 

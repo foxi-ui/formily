@@ -2,7 +2,7 @@
 
 ## Introduction
 
-![](http://img.alicdn.com/imgextra/i2/O1CN01eI9FLz22tZek2jv7E_!!6000000007178-2-tps-3683-2272.png)
+![](../../docs-assets/content/form-builder.png)
 
 Formily Form Designer is an extension package based on [designable](https://github.com/alibaba/designable). It inherits the basic capabilities of designable, and provides Formily basic form building and configuration capabilities.
 

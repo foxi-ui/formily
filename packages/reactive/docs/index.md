@@ -10,13 +10,13 @@ hero:
     - text: Document
       link: /guide
 features:
-  - icon: https://img.alicdn.com/imgextra/i1/O1CN01bHdrZJ1rEOESvXEi5_!!6000000005599-55-tps-800-800.svg
+  - icon: /assets/icons/feature-efficient.svg
     title: High Performance
     desc: Efficient update, Demand rendering
-  - icon: https://img.alicdn.com/imgextra/i2/O1CN01YqmcpN1tDalwgyHBH_!!6000000005868-55-tps-800-800.svg
+  - icon: /assets/icons/feature-domain.svg
     title: Zero Dependencies
     desc: Cross Device,Cross Framework
-  - icon: https://img.alicdn.com/imgextra/i4/O1CN01u6jHgs1ZMwXpjAYnh_!!6000000003181-55-tps-800-800.svg
+  - icon: /assets/icons/feature-smart-tips.svg
     title: Smart Tips
     desc: Embrace Typescript
 footer: Open-source MIT Licensed | Copyright © 2019-present<br />Powered by self

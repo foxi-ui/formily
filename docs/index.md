@@ -10,13 +10,13 @@ hero:
     - text: Quick start
       link: /guide/quick-start
 features:
-  - icon: https://img.alicdn.com/imgextra/i2/O1CN016i72sH1c5wh1kyy9U_!!6000000003550-55-tps-800-800.svg
+  - icon: /assets/icons/feature-easier.svg
     title: Easier to Use
     desc: Out of the box, rich cases
-  - icon: https://img.alicdn.com/imgextra/i1/O1CN01bHdrZJ1rEOESvXEi5_!!6000000005599-55-tps-800-800.svg
+  - icon: /assets/icons/feature-efficient.svg
     title: More Efficient
     desc: Fool writing, ultra-high performance
-  - icon: https://img.alicdn.com/imgextra/i3/O1CN01xlETZk1G0WSQT6Xii_!!6000000000560-55-tps-800-800.svg
+  - icon: /assets/icons/feature-professional.svg
     title: More Professional
     desc: Complete, flexible and elegant
 footer: Open-source MIT Licensed | Copyright © 2019-present<br />Powered by self
@@ -62,7 +62,7 @@ export default () => (
     scale={1.2}
   >
     <a href="//designable-antd.formilyjs.org" target="_blank" rel="noreferrer">
-      <img src="//img.alicdn.com/imgextra/i2/O1CN01eI9FLz22tZek2jv7E_!!6000000007178-2-tps-3683-2272.png" />
+      <img src="/assets/content/form-builder.png" />
     </a>
   </Section>
 )
@@ -87,7 +87,7 @@ export default () => (
       target="_blank"
       rel="noreferrer"
     >
-      <img src="//img.alicdn.com/imgextra/i4/O1CN019qbf1b1ChnTfT9x3X_!!6000000000113-55-tps-1939-1199.svg" />
+      <img src="/assets/content/guide-core-2.svg" />
     </a>
   </Section>
 )
@@ -129,7 +129,7 @@ export default () => (
     titleStyle={{ paddingBottom: 20, fontWeight: 'bold' }}
   >
     <QrCodeGroup>
-      <QrCode link="//img.alicdn.com/imgextra/i1/O1CN011zlc5b1uu1BDUpNg1_!!6000000006096-2-tps-978-1380.png" />
+      <QrCode link="/assets/content/community-qrcode.png" />
     </QrCodeGroup>
   </Section>
 )

@@ -279,7 +279,7 @@ Dumi 默认 SPA 只生成 `index.html`；GitHub Pages 没有 SPA fallback。
 
 `img.alicdn.com`、`esm.sh` 当前可访问，先保留原引用并在验收报告中记录；不在第一阶段做本地化，避免引入新的资源路径问题。
 
-> 后续进展（2026-11-11）：`esm.sh` 的三份 CSS 及其字体已本地化；`img.alicdn.com` 的 logo/favicon/hero 品牌资源也已本地化。两者均通过完整构建验证，见 `ASSET-LOCALIZATION.md` 第 8、9 节。文档内容图片仍待后续阶段处理。
+> 后续进展（2026-11-11）：`esm.sh` 的三份 CSS 及其字体、`img.alicdn.com` 的 logo/favicon/hero 品牌资源，以及 28 个文档内容图片均已本地化，并通过完整构建验证，见 `ASSET-LOCALIZATION.md` 第 8、9、10 节。仅剩 15 个 Upload 占位图仍引用 alicdn，属于后续阶段。
 
 ## 8. 审计验证结果
 

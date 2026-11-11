@@ -17,7 +17,7 @@
 #### 拉取仓库
 
 - 原始仓库：https://github.com/alibaba/formily
-- 目标仓库：fork 到自己的 github 上 ![img](https://img.alicdn.com/tfs/TB1NLrjxXY7gK0jSZKzXXaikpXa-2206-490.png)
+- 目标仓库：fork 到自己的 github 上 ![img](../../docs-assets/content/contribution-fork-target.png)
 
 #### 拉取分支
 
@@ -27,7 +27,7 @@
 
 #### 提交代码
 
-代码风格遵循 2 空格，无分号，非说明请不要在代码中附带任何 console 相关的方法及 debugger。 开发完成后，到自己 fork 出来的仓库提交 pull request ![img](https://img.alicdn.com/tfs/TB1HSvqxkT2gK0jSZFkXXcIQFXa-2050-898.png)![img](https://img.alicdn.com/tfs/TB1O.6mxbr1gK0jSZR0XXbP8XXa-1696-254.png)
+代码风格遵循 2 空格，无分号，非说明请不要在代码中附带任何 console 相关的方法及 debugger。 开发完成后，到自己 fork 出来的仓库提交 pull request ![img](../../docs-assets/content/contribution-fork.png)![img](../../docs-assets/content/contribution-pr-list.png)
 
 > 注意这里的左边目标仓库(base repository 是 alibaba/formily master) ，然后右边当前分支自己仓库的 doc-wiki
 
@@ -44,7 +44,7 @@
 
 审核阶段会进入多 review 的流程，`@janryWang` 负责审核这个改动是否合并，其他同学也会参与讨论，讨论的经过都会留存在 github 的 PR 里，钉钉群也会收到相应的通知。
 
-当看到 Pull requests 列表中的状态变为 Closed 即为合并成功。 ![img](https://img.alicdn.com/tfs/TB1HUnjxXY7gK0jSZKzXXaikpXa-964-104.png)
+当看到 Pull requests 列表中的状态变为 Closed 即为合并成功。 ![img](../../docs-assets/content/contribution-pr-closed.png)
 
 #### 同步源仓库变更到 fork 后的仓库
 

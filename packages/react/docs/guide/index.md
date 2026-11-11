@@ -22,10 +22,10 @@ With the help of protocol-driven capabilities, we can abstract a protocol fragme
 
 Because formily is a complete Typescript project, users can develop on VSCode or WebStorm to get the maximum intelligent prompt experience
 
-![img](https://img.alicdn.com/imgextra/i2/O1CN01yiREHk1X95KJPPz1c_!!6000000002880-2-tps-2014-868.png)
+![img](../../../../docs-assets/content/guide-index.png)
 
 ## Status observable
 
 Install [FormilyDevtools](https://chrome.google.com/webstore/detail/formily-devtools/kkocalmbfnplecdmbadaapgapdioecfm?hl=zh-CN) to observe the model status changes in real time and troubleshoot problems
 
-![img](https://img.alicdn.com/imgextra/i4/O1CN01DSci5h1rAGfRafpXw_!!6000000005590-2-tps-2882-1642.png)
+![img](../../../../docs-assets/content/guide-core-intro.png)

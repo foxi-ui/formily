@@ -25,7 +25,7 @@
 
 想要理解模型绑定，需要先理解什么是[MVVM](https://formilyjs-v2.bugduo.com/core/guide/mvvm)，理解了之后我们再看看这张图：
 
-![](https://img.alicdn.com/imgextra/i1/O1CN01A03C191KwT1raxnDg_!!6000000001228-55-tps-2200-869.svg)
+![](../../../../docs-assets/content/react-concept.svg)
 
 在 Formily 中，@formily/core 就是 ViewModel，Component 和 Decorator 就是 View，@formily/vue 就是将 ViewModel 和 View 绑定起来的胶水层，ViewModel 和 View 的绑定就叫做模型绑定，实现模型绑定的手段主要有[useField](/api/hooks/use-field)，也能使用[connect](/api/shared/connect)和[mapProps](/api/shared/map-props)，需要注意的是，Component 只需要支持 value/onChange 属性即可自动实现数据层的双向绑定。
 
@@ -104,7 +104,7 @@ formily 的协议驱动主要是基于标准 JSON Schema 来进行驱动渲染�
 
 前面讲了模型绑定，而协议绑定则是将 Schema 协议转换成模型绑定的过程，因为 JSON-Schema 协议是 JSON 字符串，可离线存储的，而模型绑定则是内存间的绑定关系，是 Runtime 层的，比如`x-component`在 Schema 中是组件的字符串标识，但是在模型中的 component 则是需要组件引用，所以 JSON 字符串与 Runtime 层是需要转换的。然后我们就可以继续完善一下以上模型绑定的图：
 
-![](https://img.alicdn.com/imgextra/i3/O1CN01jLCRxH1aa3V0x6nw4_!!6000000003345-55-tps-2200-1147.svg)
+![](../../../../docs-assets/content/react-concept-2.svg)
 
 总结下来，在 @formily/vue 中，主要有 2 层绑定关系，Schema 绑定模型，模型绑定组件，实现绑定的胶水层就是 @formily/vue，需要注意的是，Schema 绑定字段模型之后，字段模型中是感知不到 Schema 的，比如要修改`enum`，就是修改字段模型中的`dataSource`属性了，总之，想要更新字段模型，参考[Field](https://formilyjs-v2.bugduo.com/core/models/field)，想要理解 Schema 与字段模型的映射关系可以参考[Schema](/api/shared/schema)文档
 

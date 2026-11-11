@@ -39,7 +39,7 @@ Of course, things are not that simple, because we also have a VoidField, which i
 
 Therefore, we actually need a data path as a dedicated data field for writing data and reading data. Here we use path to describe the data path of the field. You can look at this picture for general rules:
 
-![](//img.alicdn.com/imgextra/i1/O1CN01cdzULJ1et4PBak8si_!!6000000003928-2-tps-3506-2042.png)
+![](../../../../docs-assets/content/core-field-overview.png)
 
 In summary, Address is always the absolute path representing the node, and Path is the node path that skips the VoidField, but if it is the Path of the VoidField, it will retain its own path position.
 
@@ -193,7 +193,7 @@ The query of the verification result is mainly queried through queryFeedbacks. T
 
 Compared with Field, ArrayField only extends array-related methods on the basis of inheriting Field, such as push/pop/insert/move. Why should these methods be provided? Its ability is not only to process the field data, it It also provides internal state transposition processing for the sub-nodes of ArrayField mainly to ensure that the order of the fields is consistent with the order of the data. Can cite an example:
 
-![](//img.alicdn.com/imgextra/i3/O1CN01mpGugu1QFlnfQ4qfo_!!6000000001947-2-tps-3506-1794.png)
+![](../../../../docs-assets/content/core-field-lifecycle.png)
 
 This is a move call process, the value of the array element will move, and the state of the corresponding field will also move.
 

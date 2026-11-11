@@ -21,7 +21,7 @@ observable 是响应式编程模型中最重要的一块，它的核心概念就
 
 reaction 在响应式编程模型中，它就相当于是可订阅对象的订阅者，它接收一个 tracker 函数，这个函数在执行的时候，如果函数内部有对 observable 对象中的某个属性进行**读操作**(依赖收集)，那当前 reaction 就会与该属性进行一个绑定(依赖追踪)，直到该属性在其他地方发生了**写操作**，就会触发 tracker 函数重复执行，用一张图表示：
 
-![](https://img.alicdn.com/imgextra/i4/O1CN01DQMGUL22mFICDsKfY_!!6000000007162-2-tps-1234-614.png)
+![](../../../../docs-assets/content/reactive-concept.png)
 
 可以看到从订阅到派发订阅，其实是一个封闭的循环状态机，每次 tracker 函数执行的时候都会重新收集依赖，依赖变化时又会重新触发 tracker 执行。所以，如果一旦我们不想再订阅 reaction 了，一定要手动 dispose，否则会内存泄漏。
 

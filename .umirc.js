@@ -20,6 +20,14 @@ export default {
       from: 'docs-assets/chrome',
       to: 'assets/chrome',
     },
+    {
+      from: 'docs-assets/icons',
+      to: 'assets/icons',
+    },
+    {
+      from: 'docs-assets/content',
+      to: 'assets/content',
+    },
   ],
   locales: [
     ['en-US', 'English'],

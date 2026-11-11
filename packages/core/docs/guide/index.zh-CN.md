@@ -27,10 +27,10 @@
 
 因为 formily 是完全的 Typescript 项目，所以用户在 VSCode 或 WebStorm 等上开发可以获得最大化的智能提示体验
 
-![](https://img.alicdn.com/imgextra/i2/O1CN01yiREHk1X95KJPPz1c_!!6000000002880-2-tps-2014-868.png)
+![](../../../../docs-assets/content/guide-index.png)
 
 ## 状态可观测
 
 安装 [FormilyDevtools](https://chrome.google.com/webstore/detail/formily-devtools/kkocalmbfnplecdmbadaapgapdioecfm?hl=zh-CN) 可以实时观测模型状态变化，排查问题
 
-![](//img.alicdn.com/imgextra/i4/O1CN01DSci5h1rAGfRafpXw_!!6000000005590-2-tps-2882-1642.png)
+![](../../../../docs-assets/content/guide-core-intro.png)

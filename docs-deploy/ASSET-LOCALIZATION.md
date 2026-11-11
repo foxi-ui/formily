@@ -27,7 +27,7 @@
 | 修复失效 mock 上传接口（mocky / beeceptor）                   |  +0.5–1 |
 | 动态 API / iframe 降级（GitHub、registry、CodeSandbox）       |    +1–2 |
 
-> P0（品牌资源）和 P1（esm.sh CSS 与字体）均已实施并通过完整构建验证，见第 8、9 节。
+> P0（品牌资源）、P1（esm.sh CSS 与字体）和 P2（文档内容图片）均已实施并通过完整构建验证，见第 8、9、10 节。
 
 ## 1. 审计方法
 
@@ -213,7 +213,7 @@ copy: [
 | --------------------- | ---------------------------------------------------------------------------- | ---------------------------: |
 | **P0 品牌资源**       | alicdn logo/favicon/hero + 8 个配置 + 拷贝机制                               | ✅ 已完成（原估 0.5–1 人天） |
 | **P1 CSS 与图标字体** | esm.sh 三份 CSS、element 字体、next 的 at.alicdn 字体改写、VuePress 静态拷贝 | ✅ 已完成（原估 0.5–1 人天） |
-| **P2 内容图片**       | 28 个 alicdn 内容图、37 个 md、frontmatter/TSX 特殊处理                      |                   1–1.5 人天 |
+| **P2 内容图片**       | 28 个 alicdn 内容图、37 个 md、frontmatter/TSX 特殊处理                      | ✅ 已完成（原估 1–1.5 人天） |
 | **P3 零 alicdn**      | Upload 占位图（2 个库源码文件，data URI 或随包打包）                         |                   0.5–1 人天 |
 | **P4 演示数据**       | unpkg china-location + zos 图片                                              |                0.5–0.75 人天 |
 | **P5 失效 mock**      | mocky / beeceptor 上传 action 的客户端 mock 或降级                           |                   0.5–1 人天 |
@@ -336,6 +336,41 @@ $ grep -rl 'O1CN01Kq3OHU1fph6LGqjIz|O1CN01XtT3Tv1Wd1b5hNVKy|O1CN01ZcvS4e26XMsdsC
 - Dumi 的 logo 在客户端 JS bundle 中使用本地路径（Dumi 1 的 navbar 由客户端渲染）；VuePress 的 logo 直接出现在 HTML 中：`/element/assets/chrome/logo.svg`、`/vue/assets/chrome/logo.svg`。
 - 本地静态服务器验证品牌资源全部 HTTP 200。
 - 说明：文档内容图片（P2）和 Upload 占位图（P3）仍引用 `img.alicdn.com`，因此本阶段不要求产物完全无 alicdn。
+
+## 10. P2 实施记录（2026-11-11）
+
+### 10.1 资源与引用
+
+| 类别                  |                    数量 | 本地目录 / 引用方式                               |
+| --------------------- | ----------------------: | ------------------------------------------------- |
+| frontmatter 特性图标  |                9 个 SVG | `docs-assets/icons/`，引用 `/assets/icons/<name>` |
+| 内容图片              | 19 个（8 SVG + 11 PNG） | `docs-assets/content/`                            |
+| Markdown 图片引用     |       43 处（37 个 md） | 相对路径 `docs-assets/content/...`                |
+| 内联 TSX / `<QrCode>` |                    6 处 | `/assets/content/<name>`                          |
+| frontmatter 引用      |                   48 处 | `/assets/icons/<name>`                            |
+
+- `scripts/localize-content-images.js`：包含 28 个 URL 到本地文件的映射，首次运行下载资源并按引用类型改写；改写后断言 37 个 md 中不再有 `img.alicdn.com`。
+- 6 个 Dumi 配置增加 `copy`：
+  - 根站点拷贝 `docs-assets/icons` 和 `docs-assets/content`；
+  - reactive/core/react/antd/next 拷贝 `docs-assets/icons`（frontmatter 使用根绝对路径 `/assets/icons/...`，生产环境由主站提供，开发环境由各自站点提供）。
+- Markdown 相对路径由 Dumi/VuePress 的 webpack 处理：
+  - Dumi 输出到 `<site>/static/<name>.<hash>.<ext>`，运行时通过 publicPath 前缀（根站 `/`，子站 `/core/` 等）解析；
+  - VuePress 输出到 `<site>/assets/img/...`，直接写入 HTML。
+- `scripts/verify-docs.sh` 增加：
+  - 根站 `assets/content` 至少 19 个文件；
+  - 5 个 Dumi 子站的 `assets/icons` 存在性；
+  - `img.alicdn.com/imgextra` 断言；
+  - 4 个 tfs 内容图（contribution）的残留断言。
+
+### 10.2 验证结果
+
+- `nvm use 16 && bash scripts/build-docs.sh` 通过，`verify-docs.sh` 通过。
+- 28 个内容资源 ID 在产物中命中数为 0。
+- `img.alicdn.com/imgextra` 在产物中命中数为 0。
+- 4 个 tfs 内容图在产物中命中数为 0。
+- 根站 `doc-site/assets/content/` 有 19 个文件；5 个 Dumi 子站的 `assets/icons/` 各有 9 个文件。
+- VuePress 页面已直接引用本地图片，例如 `/vue/assets/img/react-concept.<hash>.svg`。
+- 剩余 15 个 Upload 占位图 URL（`img.alicdn.com/tfs/...`）仍在主站/antd/next 的 3 个 JS bundle 中，属于 P3。
 
 ## 附录 A：审计命令
 

@@ -17,7 +17,7 @@ Welcome to our community!**Formily** It is the only official open-source form fr
 #### Pull Repository
 
 - Original repository: https://github.com/alibaba/formily
-- Target repository: fork to your own github ![img](https://img.alicdn.com/tfs/TB1NLrjxXY7gK0jSZKzXXaikpXa-2206-490.png)
+- Target repository: fork to your own github ![img](../../docs-assets/content/contribution-fork-target.png)
 
 #### Pull Branch
 
@@ -27,7 +27,7 @@ The original branch is alibaba/formily master, The branch after pulling should b
 
 #### Submit Code
 
-The code style follows 2 spaces and no semicolons. Please do not include any console-related methods and debuggers in the code unless it is explained. After the development is completed, submit a pull request to the repository you forked.![img](https://img.alicdn.com/tfs/TB1HSvqxkT2gK0jSZFkXXcIQFXa-2050-898.png)![img](https://img.alicdn.com/tfs/TB1O.6mxbr1gK0jSZR0XXbP8XXa-1696-254.png)
+The code style follows 2 spaces and no semicolons. Please do not include any console-related methods and debuggers in the code unless it is explained. After the development is completed, submit a pull request to the repository you forked.![img](../../docs-assets/content/contribution-fork.png)![img](../../docs-assets/content/contribution-pr-list.png)
 
 > Note the target repository on the left here(base repository is alibaba/formily master) . And then the doc-wiki of the current branch own repository on the right.
 
@@ -44,7 +44,7 @@ Reference documents: https://github.com/alibaba/formily/blob/master/.github/GIT_
 
 The review phase will enter a multi-review process,`@janryWang` is responsible for reviewing whether this change is merged, and other people will also participate in the discussion. The discussion will be stored in the PR of github, and the DingTalk group will also receive corresponding notifications.
 
-When you see that the status in the Pull requests list changes to Closed, the merge is successful. ![img](https://img.alicdn.com/tfs/TB1HUnjxXY7gK0jSZKzXXaikpXa-964-104.png)
+When you see that the status in the Pull requests list changes to Closed, the merge is successful. ![img](../../docs-assets/content/contribution-pr-closed.png)
 
 #### Synchronize source repository changes to repository after fork
 

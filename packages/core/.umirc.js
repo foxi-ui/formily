@@ -17,6 +17,10 @@ export default {
       from: '../../docs-assets/chrome',
       to: 'assets/chrome',
     },
+    {
+      from: '../../docs-assets/icons',
+      to: 'assets/icons',
+    },
   ],
   navs: {
     'en-US': [
