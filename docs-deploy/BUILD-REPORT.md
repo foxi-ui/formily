@@ -261,7 +261,7 @@ doc-site/vue/guide/concept.html
 
 ## 8. GitHub Pages 后续操作步骤
 
-1. 提交并推送 `docs-deploy` 分支（或合并到 `formily_next` 后推送）。
+1. 提交并推送 `docs-deploy` 分支。
 2. 确认 GitHub Actions 中 `Deploy Formily Documentation` 工作流构建与校验通过。
 3. 仓库 `Settings -> Pages`：
    - Source 选择 `GitHub Actions`

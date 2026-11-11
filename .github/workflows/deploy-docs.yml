@@ -3,7 +3,6 @@ name: Deploy Formily Documentation
 on:
   push:
     branches:
-      - formily_next
       - docs-deploy
   workflow_dispatch:
 

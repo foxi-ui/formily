@@ -224,7 +224,7 @@ VuePress 本身是静态生成，无需该配置。
 
 触发条件：
 
-- push 到 `formily_next` 或 `docs-deploy`
+- push 到 `docs-deploy`
 - 手动 `workflow_dispatch`
 
 步骤：
