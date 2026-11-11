@@ -32,6 +32,10 @@ export default {
       from: 'docs-assets/scripts',
       to: 'assets/scripts',
     },
+    {
+      from: 'docs-assets/well-known',
+      to: '.well-known',
+    },
   ],
   headScripts: [
     {
