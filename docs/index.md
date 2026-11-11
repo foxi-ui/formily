@@ -19,7 +19,7 @@ features:
   - icon: /assets/icons/feature-professional.svg
     title: More Professional
     desc: Complete, flexible and elegant
-footer: Open-source MIT Licensed | Copyright © 2019-present<br />Powered by self
+footer: Open-source MIT Licensed | Copyright © 2019-present<br />Powered by self<br /><span class="site-visit-stats" data-vercount-stats>Total site views <span data-vercount-pv>--</span> · ~<span data-vercount-uv>--</span> visitors</span>
 ---
 
 ```tsx

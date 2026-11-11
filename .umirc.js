@@ -28,6 +28,20 @@ export default {
       from: 'docs-assets/content',
       to: 'assets/content',
     },
+    {
+      from: 'docs-assets/scripts',
+      to: 'assets/scripts',
+    },
+  ],
+  headScripts: [
+    {
+      src: `${base}assets/scripts/vercount.js`,
+      defer: true,
+    },
+    {
+      src: 'https://events.vercount.one/js',
+      defer: true,
+    },
   ],
   locales: [
     ['en-US', 'English'],
@@ -301,6 +315,20 @@ export default {
     }
     nav a{
       text-decoration: none !important;
+    }
+    .site-visit-stats{
+      display:inline-block;
+      margin-top:10px;
+      font-size:14px;
+      line-height:1.6;
+      color:#b0b1ba;
+    }
+    [data-prefers-color=dark] .site-visit-stats{
+      color:rgba(255,255,255,0.45);
+    }
+    .__dumi-default-layout-footer-meta [data-vercount-page-stats]{
+      display:inline-block;
+      margin-left:auto;
     }
     `,
   ],

@@ -19,7 +19,7 @@ features:
   - icon: /assets/icons/feature-professional.svg
     title: 更专业
     desc: 完备，灵活，优雅
-footer: Open-source MIT Licensed | Copyright © 2019-present<br />Powered by self
+footer: Open-source MIT Licensed | Copyright © 2019-present<br />Powered by self<br /><span class="site-visit-stats" data-vercount-stats>全站累计浏览 <span data-vercount-pv>--</span> 次 · 约 <span data-vercount-uv>--</span> 位访客</span>
 ---
 
 ```tsx
