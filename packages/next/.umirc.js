@@ -43,10 +43,20 @@ export default {
       },
     ],
   },
+  copy: [
+    {
+      from: '../../docs-assets/generated/next-noreset.css',
+      to: 'assets/css/next-noreset.css',
+    },
+    {
+      from: '../../docs-assets/fonts/next',
+      to: 'assets/css/fonts',
+    },
+  ],
   links: [
     {
       rel: 'stylesheet',
-      href: 'https://esm.sh/@alifd/next/dist/next-noreset.css',
+      href: `${base}assets/css/next-noreset.css`,
     },
   ],
   styles: [

@@ -47,10 +47,16 @@ export default {
       },
     ],
   },
+  copy: [
+    {
+      from: '../../node_modules/antd/dist/antd.css',
+      to: 'assets/css/antd.css',
+    },
+  ],
   links: [
     {
       rel: 'stylesheet',
-      href: 'https://esm.sh/antd@4.x/dist/antd.css',
+      href: `${base}assets/css/antd.css`,
     },
   ],
   styles: [

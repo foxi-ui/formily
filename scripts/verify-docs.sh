@@ -69,6 +69,15 @@ for name in "${SITES[@]}"; do
   fi
 done
 
+# Third-party styles and icon fonts must be served from the docs origin.
+check_file "$OUTPUT/assets/css/antd.css"
+check_file "$OUTPUT/react/assets/css/antd.css"
+check_file "$OUTPUT/antd/assets/css/antd.css"
+check_file "$OUTPUT/next/assets/css/next-noreset.css"
+check_file "$OUTPUT/next/assets/css/fonts/font_515771_xjdbujl2iu.woff2"
+check_file "$OUTPUT/element/assets/css/element-ui.css"
+check_file "$OUTPUT/element/assets/css/fonts/element-icons.woff"
+
 # Deep links must be real static HTML files so that refreshing a GitHub Pages
 # URL does not return 404.
 DEEP_ROUTES=(
@@ -92,6 +101,12 @@ fi
 if [ -f "$OUTPUT/CNAME" ] && [ ! -s "$OUTPUT/CNAME" ]; then
   fail "CNAME exists but is empty"
 fi
+
+for external in "esm.sh" "at.alicdn.com"; do
+  if grep -rIl -- "$external" "$OUTPUT" >/dev/null 2>&1; then
+    fail "external dependency '$external' remains in $OUTPUT"
+  fi
+done
 
 if [ "$FAILED" -ne 0 ]; then
   echo "Documentation verification failed"

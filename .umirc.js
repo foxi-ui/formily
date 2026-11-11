@@ -12,6 +12,12 @@ export default {
   favicon:
     '//img.alicdn.com/imgextra/i3/O1CN01XtT3Tv1Wd1b5hNVKy_!!6000000002810-55-tps-360-360.svg',
   outputPath,
+  copy: [
+    {
+      from: 'node_modules/antd/dist/antd.css',
+      to: 'assets/css/antd.css',
+    },
+  ],
   locales: [
     ['en-US', 'English'],
     ['zh-CN', '中文'],
@@ -255,7 +261,7 @@ export default {
   links: [
     {
       rel: 'stylesheet',
-      href: 'https://esm.sh/antd@4.x/dist/antd.css',
+      href: `${base}assets/css/antd.css`,
     },
   ],
   styles: [

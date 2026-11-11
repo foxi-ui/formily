@@ -20,6 +20,7 @@
     "*.scss"
   ],
   "scripts": {
+    "prestart": "node ../../scripts/prepare-doc-assets.js",
     "start": "vuepress dev docs",
     "build": "rimraf -rf lib esm dist && npm run create:style && npm run build:cjs && npm run build:esm && npm run build:umd && npm run build:style",
     "create:style": "ts-node create-style",
@@ -27,6 +28,7 @@
     "build:cjs": "ttsc  --declaration",
     "build:esm": "ttsc --declaration --module es2015 --outDir esm",
     "build:umd": "rollup --config",
+    "prebuild:docs": "node ../../scripts/prepare-doc-assets.js",
     "build:docs": "vuepress build docs"
   },
   "devDependencies": {

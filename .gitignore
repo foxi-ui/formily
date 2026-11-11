@@ -24,6 +24,8 @@ package.zip
 .umi-production
 .cjsescache
 doc-site
+docs-assets/generated
+packages/element/docs/.vuepress/public/assets
 .lerna-changelog
 .history
 .lint-report.log

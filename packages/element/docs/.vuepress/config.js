@@ -27,7 +27,7 @@ module.exports = {
       'link',
       {
         rel: 'stylesheet',
-        href: 'https://esm.sh/element-ui/lib/theme-chalk/index.css',
+        href: '/assets/css/element-ui.css',
       },
     ],
   ],
