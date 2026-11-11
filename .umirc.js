@@ -136,7 +136,11 @@ export default {
         children: [
           {
             title: 'Formily Designer',
-            path: 'https://designable-antd.formilyjs.org/',
+            path: 'https://designable-antd.bugduo.com/',
+          },
+          {
+            title: 'Designable Manual',
+            path: 'https://designable-antd.bugduo.com/docs/',
           },
           {
             title: 'Designable',
@@ -251,7 +255,11 @@ export default {
         children: [
           {
             title: 'Formily 设计器',
-            path: 'https://designable-antd.formilyjs.org/',
+            path: 'https://designable-antd.bugduo.com/',
+          },
+          {
+            title: 'Designable 手册',
+            path: 'https://designable-antd.bugduo.com/docs/',
           },
           {
             title: '通用搭建引擎',
